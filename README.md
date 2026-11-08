@@ -11,7 +11,7 @@ Game/
 ---->Snake.hpp > Berisi struktur dan mekanisme utama dari ular (objek utama yang dimainkan)   
 ---->Food.hpp  > Berisi fungsi dan aturan yang dimiliki oleh objek Food (makanan)  
 
---/Mechanics/
+--/Mechanics/  
 ---->Collision.hpp > Mekanisme tabrakan (ketika menabrak tembok dan segmen sendiri)  
 ---->Snatch.hpp    > Mekanisme pencurian segmen lawan  
 ---->Growth.hpp    > Mekanisme pertumbuhan (Growth Point dan Pending Growth)  
