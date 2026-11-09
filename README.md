@@ -1,4 +1,4 @@
-# Snatch The Number-
+# Snatch The Number
 Game ini dibuat dalam bahasa C++ dengan memanfaatkan library ncurses. Sedikit mirip dengan game ular lama namun memiliki 2 pemain dimana para pemain saling bersaing untuk berebut makanan dan mencuri bagian tubuh lawan.  
 
 Arsitektur Modular:  
