@@ -1,4 +1,4 @@
-# 2player-snake-game-Terminal-Game-
+# snatch the number. 
 Game ini dibuat dalam bahasa C++ dengan memanfaatkan library ncurses. Sedikit mirip dengan game ular lama namun memiliki 2 pemain.  
   
 Arsitektur Modular:  
