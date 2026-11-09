@@ -20,3 +20,4 @@ Game/
   
 --/Platform/  
 ---->Arena.hpp     > Layout Arena  
+---->Menu.hpp      > Menampilkan notifikasi siapa yang menang, menu quit/restart, dan beberapa informasi lainnya(head value, body length, growth Point)  
