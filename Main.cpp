@@ -15,7 +15,6 @@ curs_set(0);
 
 Board board(brow,bcol);
 board.initialize();
-board.addat(5,5, '#');
 board.refresh();
 
 getch();
