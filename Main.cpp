@@ -1,9 +1,8 @@
 #include <ncurses.h>
 #include "Platform/Arena.hpp"
 
-#define bdim 30
-#define brow bdim
-#define bcol bdim * 2.5
+#define brow 30
+#define bcol 90
 using namespace std;
 
 int main()
