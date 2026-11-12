@@ -41,7 +41,6 @@ public:
     Vec2 segment(int index) const { return cells_[(first_ + index) % Capacity]; }
     Vec2 head() const { return segment(0); }
 
-    // Mengembalikan -1 bila p bukan bagian tubuh.
     int indexOf(Vec2 p) const {
         for (int i = 0; i < length_; ++i) {
             if (segment(i) == p) return i;
