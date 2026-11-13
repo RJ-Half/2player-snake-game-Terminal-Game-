@@ -90,7 +90,6 @@ class FoodField {
 
      int count() const { return count_; }
      const Food& get(int index) const { return items_[index]; }
-
      bool isFoodAt(Vec2 pos) const {
         for (int i = 0; i < count_; i++) {
             if (items_[i].pos == pos) {
@@ -104,6 +103,7 @@ class FoodField {
         bool occupied[cfg::MaxArenaH][cfg::MaxArenaW] = {false};
         for (int i = 0; i < PlayerCount; i++) {
             const Snake& s = snakes[i];
+            if (s.isDead()) continue;
             for (int j = 0; j < s.length(); j++) {
                 Vec2 pos = s.segment(j);
                 if (pos.x >= 0 && pos.x < cfg::MaxArenaW && pos.y >= 0 && pos.y < cfg::MaxArenaH) {
@@ -114,7 +114,6 @@ class FoodField {
 
             for (int i = 0; i < count_; i++) 
                 occupied[items_[i].pos.y][items_[i].pos.x] = true; 
-
             Vec2 emptyCells[cfg::MaxCells]{};
             int emptyCount = 0;
             for (int y = 0; y < arena.height; y++) {
@@ -126,7 +125,10 @@ class FoodField {
             }
 
             int waveSize = rng.range(cfg::FoodWaveMin, cfg::FoodWaveMax);
+            int remainingSlots = cfg::FoodWaveMax - count_;
+            if (remainingSlots <= 0) return;
             int toSpawn = waveSize < emptyCount ? waveSize : emptyCount;
+            if (toSpawn > remainingSlots) toSpawn = remainingSlots;
             for (int i = 0; i < toSpawn; i++) {
                 if (count_ >= cfg::FoodWaveMax) break;
                 int index = rng.range(0, emptyCount - 1);
